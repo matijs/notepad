@@ -1,0 +1,5 @@
+{
+  "icons": [
+    { "src": "./favicon.svg", "type": "image/svg+xml", "sizes": "64x64" }
+  ]
+}
