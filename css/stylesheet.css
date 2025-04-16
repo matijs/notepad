@@ -1,0 +1,19 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: oklch(85% 0.04 133);
+  color: oklch(15% 0.04 133);
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+}
+
+:not(:defined) {
+  outline: calc(2/16 * 1rem) solid oklch(62.796% 0.25768 29.234);
+}
