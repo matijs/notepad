@@ -14,16 +14,10 @@
   <script type="module" src="./js/defined.js"></script>
   <script type="module" src="./js/paragraph.js"></script>
   <script>
-    function handle() {
-      console.log('handle called');
+    function onerror(event) {
+      console.log(event);
     }
   </script>
-  <script type="module" src="nope.js" onerror="handle()"></script>
-  <script type="module">
-    import("nope.js")
-      .catch((error) => {
-        console.log(error)
-      });
-  </script>
+  <script type="module" src="nope.js" onerror="onerror"></script>
 </body>
 </html>
