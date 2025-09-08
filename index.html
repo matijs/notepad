@@ -19,9 +19,9 @@
       console.log(event);
     }
   </script>
-  <script type="module" src="nope.js" onerror="handleError(event)"></script>
+  <script type="module" src="./nope.js" onerror="handleError(event)"></script>
   <script type="module">
-    import("also-nope.js")
+    import("./also-nope.js")
       .catch(error => {
         console.log("catch");
         console.log(error);
