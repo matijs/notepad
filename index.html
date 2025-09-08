@@ -13,5 +13,17 @@
   <mb-paragraph>Hello world</mb-paragraph>
   <script type="module" src="./js/defined.js"></script>
   <script type="module" src="./js/paragraph.js"></script>
+  <script>
+    function handle() {
+      console.log('handle called');
+    }
+  </script>
+  <script type="module" src="nope.js" onerror="handle()"></script>
+  <script type="module">
+    import("nope.js")
+      .catch((error) => {
+        console.log(error)
+      });
+  </script>
 </body>
 </html>
