@@ -14,10 +14,16 @@
   <script type="module" src="./js/defined.js"></script>
   <script type="module" src="./js/paragraph.js"></script>
   <script>
-    function onerror(event) {
+    function onerror1(event) {
+      console.log('onerror1');
+      console.log(event);
+    }
+    function onerror2(event) {
+      console.log('onerror2');
       console.log(event);
     }
   </script>
-  <script type="module" src="nope.js" onerror="onerror"></script>
+  <script type="module" src="nope.js" onerror="onerror1"></script>
+  <script type="module" src="nope.js" onerror="onerror2(event)"></script>
 </body>
 </html>
