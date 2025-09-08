@@ -14,16 +14,18 @@
   <script type="module" src="./js/defined.js"></script>
   <script type="module" src="./js/paragraph.js"></script>
   <script>
-    function onerror1(event) {
-      console.log('onerror1');
-      console.log(event);
-    }
-    function onerror2(event) {
-      console.log('onerror2');
+    function onerror(event) {
+      console.log('onerror');
       console.log(event);
     }
   </script>
-  <script type="module" src="nope.js" onerror="onerror1"></script>
-  <script type="module" src="nope.js" onerror="onerror2(event)"></script>
+  <script type="module" src="nope.js" onerror="onerror(event)"></script>
+  <script type="module">
+    import("also-nope.js")
+      .catch(error => {
+        console.log("catch");
+        console.log(error);
+      });
+  </script>
 </body>
 </html>
