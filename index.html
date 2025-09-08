@@ -14,12 +14,12 @@
   <script type="module" src="./js/defined.js"></script>
   <script type="module" src="./js/paragraph.js"></script>
   <script>
-    function onerror(event) {
+    function handleError(event) {
       console.log('onerror');
       console.log(event);
     }
   </script>
-  <script type="module" src="nope.js" onerror="onerror(event)"></script>
+  <script type="module" src="nope.js" onerror="handleError(event)"></script>
   <script type="module">
     import("also-nope.js")
       .catch(error => {
