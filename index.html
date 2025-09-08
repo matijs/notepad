@@ -24,7 +24,9 @@
     import("./also-nope.js")
       .catch(error => {
         console.log("catch");
-        console.log(error);
+        console.log(error.name);
+        console.log(error.message);
+        console.log(error.stack);
       });
   </script>
 </body>
