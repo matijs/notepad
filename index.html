@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Notepad</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./css/stylesheet.css">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <mb-undefined>Undefined</mb-undefined>
+  <mb-defined>Defined</mb-defined>
+  <mb-paragraph>Hello world</mb-paragraph>
+  <script type="module" src="./js/defined.js"></script>
+  <script type="module" src="./js/paragraph.js"></script>
+  <script>
+    function handleError(event) {
+      console.log('onerror');
+      console.log(event);
+    }
+  </script>
+  <script type="module" src="./nope.js" onerror="handleError(event)"></script>
+  <script type="module">
+    import("./also-nope.js")
+      .catch(error => {
+        console.log("catch");
+        console.log(error.name);
+        console.log(error.message);
+        console.log(error.stack);
+      });
+  </script>
+</body>
+</html>
